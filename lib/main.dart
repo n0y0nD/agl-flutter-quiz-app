@@ -60,8 +60,8 @@ class _HomePageState extends State<HomePage> {
     }
   }
 
-  void playSound() {
-    print("Play sound button pressed");
+  void playSound() async {
+    await Process.run('aplay', ['assets/sounds/beep.wav']);
   }
 
   @override
