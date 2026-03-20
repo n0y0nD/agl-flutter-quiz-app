@@ -60,7 +60,7 @@ flutter:
 
   assets:
       - assets/image.jpeg
-      - assets/sounds/beep.wav
+      - assets/sounds/honk.mp3
 
   # To add assets to your application, add an assets section, like this:
   # assets:

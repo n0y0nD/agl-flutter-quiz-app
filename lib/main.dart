@@ -61,7 +61,7 @@ class _HomePageState extends State<HomePage> {
   }
 
   void playSound() async {
-    await Process.run('aplay', ['assets/sounds/beep.wav']);
+    await Process.run('mpg123', ['assets/sounds/honk.mp3']);
   }
 
   @override
