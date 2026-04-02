@@ -40,3 +40,18 @@ tested using QEMU (qemux86-64). For detailed instructions refer to the
 
 Under `recipes-demo` folder, created a new directory named 
 `agl-flutter-quiz`. This contains a `.bb` file with the following recipe:
+
+##Screenshots
+
+<img width="1211" height="741" alt="agl_apps" src="https://github.com/user-attachments/assets/607dee5f-8f77-47ae-b50b-90c84225d49a" />
+
+<img width="1211" height="741" alt="agl_main_page" src="https://github.com/user-attachments/assets/9de6a21a-ceff-4bbc-8690-89cd43419c3f" />
+
+<img width="1211" height="741" alt="agl_my_app" src="https://github.com/user-attachments/assets/7ada0b97-8ff9-49d9-b01f-efa54c270c57" />
+
+<img width="1211" height="741" alt="agl_photo" src="https://github.com/user-attachments/assets/a5699a28-83af-4cfa-be67-9243c94ee81c" />
+
+<img width="1211" height="741" alt="agl_sound" src="https://github.com/user-attachments/assets/8010e19a-163c-479b-8108-f6b95d2625d0" />
+
+
+
