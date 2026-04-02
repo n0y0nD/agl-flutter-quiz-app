@@ -117,7 +117,7 @@ class _HomePageState extends State<HomePage>
                   _GlassInfoRow(
                     icon: Icons.developer_board_rounded,
                     label: 'Kernel',
-                    value: '6.6.y-yocto-standard',
+                    value: '6.6.111-yocto-standard',
                     accentColor: const Color(0xFFFFB74D),
                   ),
 
