@@ -1,16 +1,42 @@
-# agl_flutter_quiz_app
+# AGL Flutter Quiz App
 
-A new Flutter project.
+A Flutter application for Automotive Grade Linux (AGL) that displays 
+system information and demonstrates AGL integration with a dashboard UI.
 
-## Getting Started
+## Overview
 
-This project is a starting point for a Flutter application.
+This repository contains a Flutter application designed to run on the 
+AGL platform. It displays the developer's name, AGL version, and kernel 
+version. It features a dark automotive-themed dashboard UI with image 
+display and audio playback functionality.
 
-A few resources to get you started if this is your first Flutter project:
+## Features
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+- Flutter UI optimized for automotive displays
+- Displays AGL version (20.0 Terrific Trout) and kernel info
+- Button-activated image display
+- Button-activated sound playback via `mpg123`
+- Animated dashboard with speedometer, RPM and fuel gauges
+- Integrated into AGL image via Yocto recipe
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Prerequisites
+
+- Ubuntu 22.04 LTS (Jammy Jellyfish)
+- Git
+- Python 3 and pip
+- [meta-flutter/workspace-automation](https://github.com/meta-flutter/workspace-automation)
+- Yocto Project tooling
+- AGL master branch
+
+## AGL Integration Details
+
+### 1. Build AGL locally
+
+Built the `agl-ivi-demo-flutter` image from AGL master branch and 
+tested using QEMU (qemux86-64). For detailed instructions refer to the 
+[AGL Official Documentation](https://docs.automotivelinux.org/en/trout/#01_Getting_Started/02_Building_AGL_Image/).
+
+### 2. Add Yocto recipe for the Flutter app
+
+Under `recipes-demo` folder, created a new directory named 
+`agl-flutter-quiz`. This contains a `.bb` file with the following recipe:
