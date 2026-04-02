@@ -41,7 +41,7 @@ tested using QEMU (qemux86-64). For detailed instructions refer to the
 Under `recipes-demo` folder, created a new directory named 
 `agl-flutter-quiz`. This contains a `.bb` file with the following recipe:
 
-##Screenshots
+#Screenshots
 
 <img width="1211" height="741" alt="agl_apps" src="https://github.com/user-attachments/assets/607dee5f-8f77-47ae-b50b-90c84225d49a" />
 
