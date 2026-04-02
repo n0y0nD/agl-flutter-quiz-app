@@ -45,7 +45,6 @@ class _HomePageState extends State<HomePage>
     _pulseAnimation = Tween<double>(begin: 0.6, end: 1.0).animate(
       CurvedAnimation(parent: _pulseController, curve: Curves.easeInOut),
     );
-
   }
 
   @override
@@ -111,7 +110,7 @@ class _HomePageState extends State<HomePage>
                   _GlassInfoRow(
                     icon: Icons.info_outline_rounded,
                     label: 'AGL Version',
-                    value: '13.0 (Quillback)',
+                    value: '20.0 (Terrific Trout)',
                     accentColor: const Color(0xFF81C784),
                   ),
                   const SizedBox(height: 8),
@@ -146,10 +145,7 @@ class _HomePageState extends State<HomePage>
                           glowColor: const Color(0xFF6A1B9A),
                           isActive: _soundPlaying,
                           onTap: () async {
-                            await Process.start(
-                              'mpg123' ,
-                              ['assets/sound.mp3'],
-                            );
+                            await Process.start('mpg123', ['assets/sound.mp3']);
                             setState(() => _soundPlaying = !_soundPlaying);
                           },
                         ),
@@ -191,7 +187,7 @@ class _HomePageState extends State<HomePage>
                     children: [
                       Container(
                         width: 3,
-                        height: 14,
+                        height: 16,
                         decoration: BoxDecoration(
                           color: const Color(0xFF4FC3F7),
                           borderRadius: BorderRadius.circular(2),
@@ -202,7 +198,7 @@ class _HomePageState extends State<HomePage>
                         'DASHBOARD METRICS',
                         style: TextStyle(
                           color: Colors.white38,
-                          fontSize: 11,
+                          fontSize: 15,
                           letterSpacing: 3,
                           fontWeight: FontWeight.w600,
                         ),
@@ -300,21 +296,21 @@ class _GlassInfoRow extends StatelessWidget {
               color: accentColor.withOpacity(0.12),
               borderRadius: BorderRadius.circular(8),
             ),
-            child: Icon(icon, color: accentColor, size: 15),
+            child: Icon(icon, color: accentColor, size: 20),
           ),
           const SizedBox(width: 10),
           Text(
             '$label: ',
             style: TextStyle(
               color: Colors.white.withOpacity(0.45),
-              fontSize: 13,
+              fontSize: 18,
             ),
           ),
           Text(
             value,
             style: const TextStyle(
               color: Colors.white,
-              fontSize: 13,
+              fontSize: 18,
               fontWeight: FontWeight.w700,
             ),
           ),
@@ -377,13 +373,13 @@ class _GlowButton extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Icon(icon, color: Colors.white, size: 22),
+            Icon(icon, color: Colors.white, size: 28),
             const SizedBox(height: 6),
             Text(
               label,
               style: const TextStyle(
                 color: Colors.white,
-                fontSize: 12,
+                fontSize: 16,
                 fontWeight: FontWeight.bold,
                 letterSpacing: 1.2,
               ),
@@ -427,8 +423,7 @@ class _MainSpeedometer extends StatelessWidget {
               children: [
                 CustomPaint(
                   size: const Size(160, 160),
-                  painter:
-                      _SpeedometerPainter(speed: speed, maxSpeed: 200),
+                  painter: _SpeedometerPainter(speed: speed, maxSpeed: 200),
                 ),
                 Column(
                   mainAxisSize: MainAxisSize.min,
@@ -437,7 +432,7 @@ class _MainSpeedometer extends StatelessWidget {
                       speed.toInt().toString(),
                       style: const TextStyle(
                         color: Colors.white,
-                        fontSize: 38,
+                        fontSize: 48,
                         fontWeight: FontWeight.w300,
                         letterSpacing: -1,
                       ),
@@ -446,7 +441,7 @@ class _MainSpeedometer extends StatelessWidget {
                       'KPH',
                       style: TextStyle(
                         color: Colors.white.withOpacity(0.45),
-                        fontSize: 11,
+                        fontSize: 16,
                         letterSpacing: 3,
                       ),
                     ),
@@ -503,7 +498,7 @@ class _SmallGauge extends StatelessWidget {
                     value.toInt().toString(),
                     style: const TextStyle(
                       color: Colors.white,
-                      fontSize: 18,
+                      fontSize: 22,
                       fontWeight: FontWeight.w600,
                     ),
                   ),
@@ -511,7 +506,7 @@ class _SmallGauge extends StatelessWidget {
                     unit,
                     style: TextStyle(
                       color: Colors.white.withOpacity(0.4),
-                      fontSize: 9,
+                      fontSize: 12,
                       letterSpacing: 1.5,
                     ),
                   ),
@@ -525,7 +520,7 @@ class _SmallGauge extends StatelessWidget {
           label,
           style: TextStyle(
             color: color.withOpacity(0.8),
-            fontSize: 10,
+            fontSize: 14,
             letterSpacing: 2,
             fontWeight: FontWeight.w600,
           ),
@@ -578,8 +573,7 @@ class _SpeedometerPainter extends CustomPainter {
             startAngle: startAngle,
             endAngle: startAngle + sweepAngle * fraction,
             colors: const [Color(0xFF1565C0), Color(0xFF00E5FF)],
-          ).createShader(
-              Rect.fromCircle(center: center, radius: radius))
+          ).createShader(Rect.fromCircle(center: center, radius: radius))
           ..style = PaintingStyle.stroke
           ..strokeWidth = 10
           ..strokeCap = StrokeCap.round,
