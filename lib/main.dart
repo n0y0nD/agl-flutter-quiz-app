@@ -145,7 +145,7 @@ class _HomePageState extends State<HomePage>
                           glowColor: const Color(0xFF6A1B9A),
                           isActive: _soundPlaying,
                           onTap: () async {
-                            await Process.start('mpg123', ['assets/sound.mp3']);
+                            await Process.start('mpg123', ['usr/share/agl_flutter_quiz/sound.mp3']);
                             setState(() => _soundPlaying = !_soundPlaying);
                           },
                         ),
