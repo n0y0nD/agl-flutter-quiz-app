@@ -47,6 +47,16 @@ Under `recipes-demo` folder, created a new directory named
 
 <img width="1211" height="741" alt="agl_apps" src="https://github.com/user-attachments/assets/607dee5f-8f77-47ae-b50b-90c84225d49a" />
 
+<img width="1218" height="741" alt="agl_app_main" src="https://github.com/user-attachments/assets/f358a7fe-5aca-4007-961c-da5f5cc8f593" />
+
+<img width="1218" height="741" alt="agl_photo" src="https://github.com/user-attachments/assets/c6b2502d-621b-42a5-af24-866a8d912d5a" />
+
+<img width="1218" height="741" alt="agl_sound" src="https://github.com/user-attachments/assets/8bedecec-4928-4d84-a764-e5caba4aa402" />
+
+
+
+
+
 
 
 
