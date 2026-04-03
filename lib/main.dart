@@ -110,7 +110,7 @@ class _HomePageState extends State<HomePage>
                   _GlassInfoRow(
                     icon: Icons.info_outline_rounded,
                     label: 'AGL Version',
-                    value: '20.0 (Terrific Trout)',
+                    value: '21.90.0 (vimba)',
                     accentColor: const Color(0xFF81C784),
                   ),
                   const SizedBox(height: 8),
